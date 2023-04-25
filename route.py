@@ -128,7 +128,7 @@ def get_address(address_id: int, db: Session = Depends(get_db)):
 
 @app.get("/addresses", response_model=list[AddressResponse])
 def get_addresses(latitude: float, longitude: float, distance: float, db: Session = Depends(get_db)):
-    """Endpoint for fetching all existing address.
+    """Endpoint for fetching all existing address based on value of latitude, longitude and distance.
 
     Args:
         latitude (float): value of latitude.
